@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_monaco_editor_browser_example=self.webpackChunkreact_monaco_editor_browser_example||[]).push([[56],{1056:(e,r,a)=>{a.r(r)}}]);

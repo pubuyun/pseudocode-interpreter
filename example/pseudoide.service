@@ -1,0 +1,13 @@
+[Unit]
+Description=PseudoIDE Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/pseudoide/editor/example
+ExecStart=/bin/bash -c "yarn start & python3 webserver.py"
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

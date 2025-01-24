@@ -1,0 +1,300 @@
+[{
+"label": "PROCEDURE",
+"kind": "Keyword",
+"insertText": "PROCEDURE",
+"documentation": "Defines a new procedure"
+},
+{
+"label": "ENDPROCEDURE",
+"kind": "Keyword",
+"insertText": "ENDPROCEDURE",
+"documentation": "Ends a procedure"
+},
+{
+"label": "FUNCTION",
+"kind": "Keyword",
+"insertText": "FUNCTION",
+"documentation": "Defines a new function"
+},
+{
+"label": "RETURNS",
+"kind": "Keyword",
+"insertText": "RETURNS",
+"documentation": "Specifies the return type of a function"
+},
+{
+"label": "ENDFUNCTION",
+"kind": "Keyword",
+"insertText": "ENDFUNCTION",
+"documentation": "Ends a function definition"
+},
+{
+"label": "IF",
+"kind": "Keyword",
+"insertText": "IF",
+"documentation": "Conditional statement"
+},
+{
+"label": "THEN",
+"kind": "Keyword",
+"insertText": "THEN",
+"documentation": "Used with IF"
+},
+{
+"label": "ELSE",
+"kind": "Keyword",
+"insertText": "ELSE",
+"documentation": "Else block in IF-ELSE"
+},
+{
+"label": "ENDIF",
+"kind": "Keyword",
+"insertText": "ENDIF",
+"documentation": "Ends an IF block"
+},
+{
+"label": "CASE OF",
+"kind": "Keyword",
+"insertText": "CASE OF",
+"documentation": "Switch case-like structure"
+},
+{
+"label": "OF",
+"kind": "Keyword",
+"insertText": "OF",
+"documentation": "Used in CASE OF"
+},
+{
+"label": "OTHERWISE",
+"kind": "Keyword",
+"insertText": "OTHERWISE",
+"documentation": "Default case in CASE OF"
+},
+{
+"label": "ENDCASE",
+"kind": "Keyword",
+"insertText": "ENDCASE",
+"documentation": "Ends a CASE OF block"
+},
+{
+"label": "FOR",
+"kind": "Keyword",
+"insertText": "FOR",
+"documentation": "For loop"
+},
+{
+"label": "TO",
+"kind": "Keyword",
+"insertText": "TO",
+"documentation": "Used in FOR loop"
+},
+{
+"label": "STEP",
+"kind": "Keyword",
+"insertText": "STEP",
+"documentation": "Increment in FOR loop"
+},
+{
+"label": "NEXT",
+"kind": "Keyword",
+"insertText": "NEXT",
+"documentation": "End of FOR loop"
+},
+{
+"label": "REPEAT",
+"kind": "Keyword",
+"insertText": "REPEAT",
+"documentation": "Repeat loop"
+},
+{
+"label": "UNTIL",
+"kind": "Keyword",
+"insertText": "UNTIL",
+"documentation": "Used with REPEAT"
+},
+{
+"label": "WHILE",
+"kind": "Keyword",
+"insertText": "WHILE",
+"documentation": "While loop"
+},
+{
+"label": "DO",
+"kind": "Keyword",
+"insertText": "DO",
+"documentation": "Used with WHILE"
+},
+{
+"label": "ENDWHILE",
+"kind": "Keyword",
+"insertText": "ENDWHILE",
+"documentation": "Ends a WHILE loop"
+},
+{
+"label": "DECLARE",
+"kind": "Keyword",
+"insertText": "DECLARE",
+"documentation": "Declares a variable"
+},
+{
+"label": "CONSTANT",
+"kind": "Keyword",
+"insertText": "CONSTANT",
+"documentation": "Declares a constant"
+},
+{
+"label": "INPUT",
+"kind": "Keyword",
+"insertText": "INPUT",
+"documentation": "Input statement"
+},
+{
+"label": "OUTPUT",
+"kind": "Keyword",
+"insertText": "OUTPUT",
+"documentation": "Output statement"
+},
+{
+"label": "RETURN",
+"kind": "Keyword",
+"insertText": "RETURN",
+"documentation": "Return statement"
+},
+{
+"label": "OPENFILE",
+"kind": "Keyword",
+"insertText": "OPENFILE",
+"documentation": "File open operation"
+},
+{
+"label": "READFILE",
+"kind": "Keyword",
+"insertText": "READFILE",
+"documentation": "File read operation"
+},
+{
+"label": "WRITEFILE",
+"kind": "Keyword",
+"insertText": "WRITEFILE",
+"documentation": "File write operation"
+},
+{
+"label": "CLOSEFILE",
+"kind": "Keyword",
+"insertText": "CLOSEFILE",
+"documentation": "File close operation"
+},
+{
+"label": "CALL",
+"kind": "Keyword",
+"insertText": "CALL",
+"documentation": "Call function or procedure"
+},
+{
+"label": "ARRAY",
+"kind": "Keyword",
+"insertText": "ARRAY",
+"documentation": "Array declaration"
+},
+{
+"label": "INTEGER",
+"kind": "Keyword",
+"insertText": "INTEGER",
+"documentation": "Integer data type"
+},
+{
+"label": "REAL",
+"kind": "Keyword",
+"insertText": "REAL",
+"documentation": "Real number data type"
+},
+{
+"label": "CHAR",
+"kind": "Keyword",
+"insertText": "CHAR",
+"documentation": "Character data type"
+},
+{
+"label": "STRING",
+"kind": "Keyword",
+"insertText": "STRING",
+"documentation": "String data type"
+},
+{
+"label": "BOOLEAN",
+"kind": "Keyword",
+"insertText": "BOOLEAN",
+"documentation": "Boolean data type"
+},
+{
+"label": "READ",
+"kind": "Keyword",
+"insertText": "READ",
+"documentation": "Read operation"
+},
+{
+"label": "WRITE",
+"kind": "Keyword",
+"insertText": "WRITE",
+"documentation": "Write operation"
+},
+{
+"label": "TRUE",
+"kind": "Keyword",
+"insertText": "TRUE",
+"documentation": "Boolean true value"
+},
+{
+"label": "FALSE",
+"kind": "Keyword",
+"insertText": "FALSE",
+"documentation": "Boolean false value"
+},
+{
+"label": "AND",
+"kind": "Keyword",
+"insertText": "AND",
+"documentation": "Logical AND operator"
+},
+{
+"label": "OR",
+"kind": "Keyword",
+"insertText": "OR",
+"documentation": "Logical OR operator"
+},
+{
+"label": "NOT",
+"kind": "Keyword",
+"insertText": "NOT",
+"documentation": "Logical NOT operator"
+},
+{
+"label": "SUBSTRING",
+"kind": "Function",
+"insertText": "SUBSTRING",
+"documentation": "SUBSTRING(string, startindex, endindex), Extracts a substring from a string"
+},
+{
+"label": "RANDOM",
+"kind": "Function",
+"insertText": "RANDOM",
+"documentation": "RANDOM() returns a value -> [0,1] (0 to 1 inclusive)"
+},
+{
+"label": "LENGTH",
+"kind": "Function",
+"insertText": "LENGTH",
+"documentation": "LENGTH(string) returns the length of the string"
+},
+{
+"label": "LCASE",
+"kind": "Function",
+"insertText": "LCASE",
+"documentation": "LCASE(string) returns the lower case of the string"
+},
+{
+"label": "UCASE",
+"kind": "Function",
+"insertText": "UCASE",
+"documentation": "UCASE(string) returns the upper case of the string"
+}]

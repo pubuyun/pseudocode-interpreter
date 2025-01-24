@@ -1,0 +1,81 @@
+DECLARE names : ARRAY[1:5] OF STRING
+DECLARE iterator, jiterator : INTEGER
+DECLARE temp : STRING
+
+FOR iterator <- 1 TO 5
+	OUTPUT "enter name"
+	INPUT names[iterator]
+NEXT iterator
+
+  
+//65-90
+FUNCTION ASCII(string : STRING) RETURNS INTEGER
+	DECLARE ascii : INTEGER
+	ascii <- 0
+	DECLARE s : STRING
+	s <- UCASE(string)
+	DECLARE letters : ARRAY[1:26] OF CHAR
+	letters[1] <- "A"
+	letters[2] <- "B"
+	letters[3] <- "C"
+	letters[4] <- "D"
+	letters[5] <- "E"
+	letters[6] <- "F"
+	letters[7] <- "G"
+	letters[8] <- "H"
+	letters[9] <- "I"
+	letters[10] <- "J"
+	letters[11] <- "K"
+	letters[12] <- "L"
+	letters[13] <- "M"
+	letters[14] <- "N"
+	letters[15] <- "O"
+	letters[16] <- "P"
+	letters[17] <- "Q"
+	letters[18] <- "R"
+	letters[19] <- "S"
+	letters[20] <- "T"
+	letters[21] <- "U"
+	letters[22] <- "V"
+	letters[23] <- "W"
+	letters[24] <- "X"
+	letters[25] <- "Y"
+	letters[26] <- "Z"
+	
+	
+	FOR iterator<-1 TO LENGTH(s)
+		DECLARE flag : BOOLEAN
+		flag <- TRUE  
+		
+		DECLARE asci : INTEGER
+		asci <- 0
+		
+		FOR jiterator<-1 TO 26
+			IF flag THEN
+				IF SUBSTRING(s,iterator,1) = letters[jiterator] THEN
+					asci <- 64+jiterator
+					flag <- FALSE
+				ENDIF
+			ENDIF
+		NEXT jiterator
+		  
+		ascii <- asci*100 + asci
+	NEXT iterator
+	RETURN ascii
+
+ENDFUNCTION
+
+
+FOR iterator <- 1 TO 4
+	FOR jiterator <- 1 TO 5 - iterator
+		IF ASCII(names[jiterator]) > ASCII(names[jiterator+1]) THEN
+			temp <- names[jiterator]
+			names[jiterator] <- names[jiterator+1]
+			names[jiterator+1] <- temp
+		ENDIF
+	NEXT jiterator
+NEXT iterator  
+
+FOR iterator <- 1 TO 5
+	OUTPUT names[iterator]
+NEXT iterator

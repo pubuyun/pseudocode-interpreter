@@ -1,0 +1,2 @@
+DECLARE a:INTEGER
+OUTPUT "Helloworld"
