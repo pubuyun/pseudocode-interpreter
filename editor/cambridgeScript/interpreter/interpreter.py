@@ -131,7 +131,7 @@ class Interpreter(ExpressionVisitor, StatementVisitor):
         else:
             return StatementVisitor.visit(self, thing)
 
-    def     visit_statements(self, statements: list[Statement]):
+    def visit_statements(self, statements: list[Statement]):
         for stmt in statements:
             if isinstance(stmt, ReturnStmt):
                 return self.visit_return(stmt)

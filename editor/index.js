@@ -23,7 +23,7 @@ class CodeEditor extends React.Component {
     
   }
   connectWebSocket = () => {
-    const socket = new WebSocket("ws://120.25.192.109:5000/");
+    const socket = new WebSocket("ws://127.0.0.1:5000/");
   
     socket.onopen = () => {
       console.log("WebSocket connected");
