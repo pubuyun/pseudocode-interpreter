@@ -16,7 +16,7 @@ from dataclasses import dataclass
 from cambridgeScript.constants import Keyword, Symbol
 
 
-
+# char type
 class str1(str):
     def __new__(cls, value):
         if len(value) != 1:
@@ -118,10 +118,6 @@ _TOKENS = [
     ("INVALID", r"."),
     ("EOF", r"$"),
 ]
-
-
-
-
 _TOKEN_REGEX = "|".join(f"(?P<{name}>{regex})" for name, regex in _TOKENS)
 
 
@@ -163,8 +159,8 @@ def parse_tokens(code: str) -> list[Token]:
     res: list[Token] = []
     line_number: int = 1
     line_start: int = 0
-    last_token = None  # 记录最后一个有效 Token
-    jump = False
+    last_token = None  # record last valid token
+    jump = False # jump to next token, for minus sign
     for match in re.finditer(_TOKEN_REGEX, code, re.M):
         if jump: 
             jump = False 
@@ -187,13 +183,13 @@ def parse_tokens(code: str) -> list[Token]:
                 line_number
             )
 
-        # 特殊处理负号
+        # process minus sign
         if token_type == "SYMBOL" and token_value == "-":
-            if (last_token is None or  # 行首
-                isinstance(last_token, SymbolToken) or  # 紧接符号
-                isinstance(last_token, KeywordToken) or  # 关键字后
-                isinstance(last_token, EOFToken)):  # 文件末尾前
-                # 尝试将后续的 Token 与当前符号结合
+            if (last_token is None or  # first token
+                isinstance(last_token, SymbolToken) or  # after symbol
+                isinstance(last_token, KeywordToken) or  # after keyword
+                isinstance(last_token, EOFToken)):  # EOF
+                # try to match next token
                 match_next = re.match(_TOKEN_REGEX, code[match.end():])
                 if match_next and match_next.lastgroup == "LITERAL":
                     literal_value = code[match.end():match.end() + len(match_next.group())]
@@ -223,5 +219,5 @@ def parse_tokens(code: str) -> list[Token]:
             )
 
         res.append(token)
-        last_token = token  # 更新最后一个 Token
+        last_token = token
     return res
