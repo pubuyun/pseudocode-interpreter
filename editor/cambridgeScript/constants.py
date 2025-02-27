@@ -51,8 +51,6 @@ class Keyword(StrEnum):
     BOOLEAN = "BOOLEAN"
     READ = "READ"
     WRITE = "WRITE"
-    TRUE = "TRUE"
-    FALSE = "FALSE"
     AND = "AND"
     OR = "OR"
     NOT = "NOT"
@@ -73,17 +71,21 @@ class Symbol(StrEnum):
     LESS = "<"
     GREAT = ">"
     ADD = "+"
-    STRADD = "&"
+    CONCAT = "&"
     SUB = "-"
     MUL = "*"
     DIV = "/"
     POW = "^"
-    DDIV = "DIV"
-    MOD = "MOD"
+    # DDIV = "DIV"
+    # MOD = "MOD"
 
 
 def _unary_sub(n):
     return -n
+
+
+def str_concat(a, b):
+    return str(a) + str(b)
 
 
 class Operator:
@@ -101,5 +103,6 @@ class Operator:
     UNARY_SUB = _unary_sub
     MUL = operator.mul
     DIV = operator.truediv
-    DDIV = operator.floordiv
-    MOD = operator.mod
+    CONCAT = str_concat
+    # DDIV = operator.floordiv
+    # MOD = operator.mod
